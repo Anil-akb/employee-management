@@ -1,12 +1,12 @@
 import React from "react";
-import { Login } from "./AuthLogin";
+import AuthSignup from "./AuthSignup";
 
 type Props = {};
 
 const page = (props: Props) => {
   return (
     <div>
-      <Login />
+      <AuthSignup />
     </div>
   );
 };

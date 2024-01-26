@@ -13,7 +13,6 @@ const employeeSchema = new Schema<IEmployee>(
   {
     email: {
       type: String,
-      required: true,
     },
     name: {
       type: String,

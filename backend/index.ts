@@ -6,6 +6,7 @@ import mongoose from "mongoose";
 import authRoute from "./src/routes/auth.routes";
 import depapartmentRoute from "./src/routes/department.routes";
 import employeeRoute from "./src/routes/employee.routes";
+import userRoute from "./src/routes/user.routes";
 
 dotenv.config();
 
@@ -31,6 +32,7 @@ app.use(cors());
 app.use(authRoute);
 app.use(depapartmentRoute);
 app.use(employeeRoute);
+app.use(userRoute);
 
 app.use((req, res) => {
   console.log(`Received a request: ${req.method} ${req.url}`);

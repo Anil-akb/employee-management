@@ -21,9 +21,9 @@ export const createEmployee = async (req: Request, res: Response) => {
     const existingDepartment = await Department.findById(departmentId);
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    if (!existingDepartment) {
-      return res.status(404).json({ message: "Department not found" });
-    }
+    // if (!existingDepartment) {
+    //   return res.status(404).json({ message: "Department not found" });
+    // }
 
     const newEmployee = new Employee({
       email,

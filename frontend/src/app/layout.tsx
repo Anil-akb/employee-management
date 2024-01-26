@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import AppProvider from "@/redux/AppProvider";
+import { Toaster } from "react-hot-toast";
+import Header from "@/components/layout/Header";
+import Checkauthentication from "@/components/CheckAuthentication";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <AppProvider>
+          <Checkauthentication>
+            <Header />
+            {children}
+          </Checkauthentication>
+        </AppProvider>
+        <Toaster position="top-center" />
+      </body>
     </html>
   );
 }

@@ -1,12 +1,12 @@
+import Employee from "@/components/employee/Employee";
 import React from "react";
-import { Login } from "./AuthLogin";
 
 type Props = {};
 
 const page = (props: Props) => {
   return (
     <div>
-      <Login />
+      <Employee />
     </div>
   );
 };
